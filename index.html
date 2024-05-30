@@ -10,43 +10,68 @@
 </head>
 
 <body>
+
     <div>
         <div class="logo-div">
             <a href="">
                 <img src="./assets/logo-ropa.png" alt="Logo" class="logo">
             </a>
         </div>
-        <div class="navbar">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="./pages/tienda.html">Tienda</a></li>
-            <li><a href="./pages/nosotros.html">Nosotros</a></li>
-            <li><a href="./pages/contacto.html">Contacto</a></li>
-            <li><a href="./pages/carrito.html"><img src="../assets/carrito.png" alt="compras" class="carrito"></a></li>
-          </div>
+        <nav class="navbar bg-black border-bottom border-body" data-bs-theme="dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">Ropa</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                  <a class="nav-link" href="./pages/tienda.html">Tienda</a>
+                  <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
+                  <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                  <a class="nav-link" href="./pages/carrito.html">Carrito</a>
+              </div>
+            </div>
+          </nav>
         <hr>
         <h1> Ropa </h1>
     </div>
+    <main>
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+             <div class="carousel-item active">
+              <img src="./assets/portada.png" class="d-block w-100" alt="portada">
+             </div>
+             <div class="carousel-item">
+              <img src="./assets/portada-2.png" class="d-block w-100" alt="portada-2">
+              </div>
+             <div class="carousel-item">
+               <img src="./assets/portada-3.png" class="d-block w-100" alt="portada-3">
+             </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    <!-- <main class="negro">
+        <img src="assets/portada.png" alt="portada" class="imgportada"> -->
 
-    <main class="negro">
-        <img src="assets/portada.png" alt="portada" class="imgportada">
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aperiam expedita nemo provident maxime! Vel
-            earum iste, rerum asperiores explicabo, ex, cum quos aliquam odit doloremque consectetur illum voluptas
-            laboriosam natus! Eos possimus unde provident et quae in sed, nulla impedit rem illum odio reprehenderit, ut
-            corporis magnam? Modi amet quia esse cum placeat porro! Minima quos omnis deleniti, hic quis inventore
-            dignissimos veritatis maiores? Similique modi explicabo eligendi perspiciatis voluptate, hic illo iure?
-            Ullam, nulla! Laboriosam atque distinctio rem, vero dolor impedit eaque quis ad saepe cum quae porro vel
-            nostrum repudiandae, delectus, autem recusandae. Asperiores similique doloribus optio porro quas nam, rem
-            odit, ex animi cumque aut iusto ut perferendis facilis alias fuga inventore minima culpa quae obcaecati?
-            Eius assumenda sequi excepturi labore eos sint blanditiis voluptatum modi laudantium. Neque, culpa. Nobis
-            earum harum unde fugiat, reprehenderit eveniet quidem nihil dicta debitis. Quibusdam inventore quaerat ab
-            velit accusamus!</p>
-        <ul>
-            <li>Ir a la tienda</li>
-            <li>Sumar al carrito los productos que desees</li>
-            <li>Seleccionar forma de pago</li>
-            <li>Confirmar tu pedido</li>
-        </ul>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aperiam expedita nemo provident maxime! Vel
+                earum iste, rerum asperiores explicabo, ex, cum quos aliquam odit doloremque consectetur illum voluptas
+                laboriosam natus! Eos possimus unde provident et quae in sed, nulla impedit rem illum odio reprehenderit, ut
+                corporis magnam? Modi amet quia esse cum placeat porro! Minima quos omnis deleniti, hic quis inventore
+                dignissimos veritatis maiores? Similique modi explicabo eligendi perspiciatis voluptate, hic illo iure?
+                Ullam, nulla! Laboriosam atque distinctio rem, vero dolor impedit eaque quis ad saepe cum quae porro vel
+                nostrum repudiandae, delectus, autem recusandae. Asperiores similique doloribus optio porro quas nam, rem
+                odit, ex animi cumque aut iusto ut perferendis facilis alias fuga inventore minima culpa quae obcaecati?
+                Eius assumenda sequi excepturi labore eos sint blanditiis voluptatum modi laudantium. Neque, culpa. Nobis
+                earum harum unde fugiat, reprehenderit eveniet quidem nihil dicta debitis. Quibusdam inventore quaerat ab
+                velit accusamus!</p>
     </main>
     <hr>
     <footer>
