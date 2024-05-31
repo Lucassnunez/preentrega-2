@@ -284,18 +284,6 @@ main {
     margin: 0;
 }
 
-.div-cantidad {
-    position: relative; /* Establece el posicionamiento relativo para el contenedor */
-    width: 100%; /* Ocupa todo el ancho del contenedor */
-}
-
-.cantidad-producto {
-    position: absolute; /* Establece el posicionamiento absoluto para el número */
-    bottom: 0; /* Lo posiciona en la parte inferior */
-    right: 0; /* Lo posiciona en el lado derecho */
-    margin: 0; /* Elimina el margen predeterminado */
-}
-
 @media (max-width: 300px) {
     .linea-carrito {
         flex-direction: column;
