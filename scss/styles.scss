@@ -1,322 +1,309 @@
+@import 'variables';
+@import 'mixins';
+
 html {
-    min-height: 100%;
-    position: relative;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-  
-  h1 {
-    color: white;
-    text-align: center;
-    padding-top: 25px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-  }
-  
-  .blanco {
-    color: white;
-  }
-  
+  min-height: 100%;
+  position: relative;
+  font-family: $fuente-body;
+
   body {
-    background-color: black;
-    // margin-left: 100px;
-    // margin-right: 100px;
-  }
-  
-  .negro {
-    color: black;
-  }
-  
-  .logo {
-    width: 85px;
-    height: 85px;
-  }
-  
-  .navbar {
-    text-align: right;
-    position: relative;
-  
+    background-color: $color-secundario;
+
+    .blanco {
+      color: $color-primario;
+    }
+
+    .negro {
+      color: $color-secundario;
+    }
+
+    main {
+      margin-bottom: 50px;
+
+      .linea-articulo {
+        @include flex-center;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .div-articulo {
+          @include flex-center;
+          flex-direction: row;
+          flex-wrap: wrap;
+          overflow: hidden;
+          margin: 10px 0;
+          padding: 20px;
+
+          .div-img {
+            flex: 1 1 200px;
+            @include flex-center;
+            margin-right: 20px;
+
+            .img-articulo {
+              max-width: 100%;
+              height: auto;
+              border-radius: 5px;
+              border: 5px solid $border-color;
+            }
+          }
+
+          .div-descripcion {
+            flex: 2 1 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .titulo-articulo {
+              text-align: left;
+              margin-left: 50px;
+            }
+          }
+
+          .div-btn {
+            display: table-cell;
+            padding-right: 100px;
+            vertical-align: middle;
+
+            .plus-button {
+              width: 40px;
+              height: 40px;
+              border: none;
+              border-radius: 50%;
+              background-color: $border-color;
+              color: $color-primario;
+              font-size: 24px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    #carouselExample {
+        width: 50%;
+        margin: 0 auto;
+      
+        .carousel-inner {
+          .carousel-item {
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+      
+        .carousel-control-prev,
+        .carousel-control-next {
+          width: 5%;
+        }
+      }
+
+    .finalizar-compra {
+      color: $color-primario;
+      @include center-text;
+      margin-top: 60px;
+    }
+
+    .linea-carrito {
+      display: table-row;
+      width: 80%;
+      margin-bottom: $margin-bottom-carrito;
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+
+      .img-carrito {
+        width: 80px;
+        height: 80px;
+      }
+
+      .div-cantidad {
+        display: table-cell;
+        vertical-align: top;
+        padding-right: 500px;
+      }
+
+      .div-carrito {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+
+        .div-img-carrito img {
+          max-width: 100px;
+          height: auto;
+          margin-right: 20px;
+        }
+
+        .titulo-carrito {
+          margin: 0;
+        }
+      }
+    }
+
+    .total-carrito {
+      color: $color-primario;
+      font-size: 22px;
+    }
+
+    .producto-tabla {
+      @include flex-center;
+      padding: 10px;
+    }
+
+    .producto-carrito {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 40px;
+    }
+
+    p, li, label, h2, h3 {
+      color: $color-primario;
+    }
+
+    p {
+      color: $color-primario;
+    }
+
     li {
-      list-style: none;
-      display: inline-block;
-      margin-left: 10px;
+      margin-top: 5px;
+    }
+
+    form {
+      margin-top: 60px;
+      @include center-text;
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      input {
+        margin-bottom: 15px;
+      }
+    }
+
+    .imgportada {
+      margin: 15px 0 20px 23.5rem;
+    }
+
+    ol {
+      margin-top: 45px;
+    }
+
+    .info {
+      @include center-text;
+      margin-top: 45px;
+    }
+
+    iframe {
+      margin: 25px 0 0 550px;
+    }
+
+    h2 {
+      @include center-text;
+      margin-top: 25px;
+    }
+
+    h3 {
+      margin-top: 50px;
+    }
+
+    .carrito {
+      width: $tamano-carrito;
+      height: $tamano-carrito;
+    }
+
+    .local {
+      height: 500px;
+      width: 100%;
     }
   }
-  
-  a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: white;
-    font-size: 20px;
-  }
-  
-  p {
-    color: white;
-  }
-  
+}
+
+h1 {
+  color: $color-primario;
+  @include center-text;
+  padding-top: $padding-top-h1;
+  font-family: $fuenteh-1;
+}
+
+.logo {
+  width: $tamano-logo;
+  height: $tamano-logo;
+}
+
+.navbar {
+  @include center-text;
+  position: relative;
+
   li {
-    color: white;
-    margin-top: 5px;
+    list-style: none;
+    display: inline-block;
+    margin-left: 10px;
   }
-  
-  form {
-    margin-top: 60px;
-    text-align: center;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color-primario;
+  font-size: 20px;
+}
+
+.checkout-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: $border-color;
+  color: $color-primario;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $border-color;
   }
-  
-  label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: white;
-  }
-  
-  input {
-    margin-bottom: 15px;
-  }
-  
-  .imgportada {
-    margin-left: 23.5rem;
-    margin-bottom: 20px;
-    margin-top: 15px;
-  }
-  
-  ol {
-    margin-top: 45px;
-  }
-  
-  .info {
-    text-align: center;
-    margin-top: 45px;
-  }
-  
-  iframe {
-    margin-left: 550px;
-    margin-top: 25px;
-  }
-  
-  h2 {
-    color: white;
-    text-align: center;
-    margin-top: 25px;
-  }
-  
-  h4 {
-    color: white;
-    margin-top: 50px;
-  }
-  
-  footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 40px;
-  }
-  
-  .carrito {
-    width: 25px;
-    height: 25px;
-  }
-  
-  .local {
-    height: 500px;
-    width: 100%;
-  }
-  
-  main {
-    margin-bottom: 50px;
-  }
-  
-  .linea-articulo {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
+}
+
+@include responsive(large) {
   .div-articulo {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    overflow: hidden;
-    margin: 10px 0;
-    padding: 20px;
-  }
-  
-  .div-img {
-    flex: 1 1 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 20px;
-  }
-  
-  .img-articulo {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    border: 5px solid #7900ff;
-  }
-  
-  .div-descripcion {
-    flex: 2 1 300px;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-  }
-  
-  .titulo-articulo {
-    text-align: left;
-    margin-left: 50px;
-  }
-  
-  .div-btn {
-    display: table-cell;
-    padding-right: 100px;
-    vertical-align: middle;
-  }
-  
-  .plus-button {
-    width: 40px;
-    height: 40px;
-    border: none;
-    border-radius: 50%;
-    background-color: #7900FF;
-    color: #fff;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  
-  .checkout-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #7900FF;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  
-    &:hover {
-      background-color: #7900FF;
-    }
-  }
-  
-  .finalizar-compra {
-    color: white;
-    text-align: center;
-    margin-top: 60px;
-  }
-  
-  .linea-carrito {
-    display: table-row;
-    width: 80%;
-    margin-bottom: 10px;
-  }
-  
-  .img-carrito {
-    width: 80px;
-    height: 80px;
-  }
-  
-  .div-cantidad {
-    display: table-cell;
-    vertical-align: top;
-    padding-right: 500px;
-  }
-  
-  .total-carrito {
-    color: white;
-    font-size: 22px;
-  }
-  
-  .producto-tabla {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-  }
-  
-  @media (max-width: 768px) {
-    .div-articulo {
-      flex-direction: column;
-    }
-  
+
     .div-img {
       margin-right: 0;
       margin-bottom: 20px;
     }
   }
-  
-  @media (max-width: 480px) {
-    .titulo-articulo {
-      font-size: 1.2em;
-    }
-  
-    .descripcion-articulo {
-      font-size: 0.9em;
-    }
-  }
-  
-  .producto-carrito {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .linea-carrito {
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-  }
-  
-  .div-carrito {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-  }
-  
-  .div-img-carrito {
-    img {
-      max-width: 100px;
-      height: auto;
-      margin-right: 20px;
-    }
-  }
-  
-  .titulo-carrito {
-    margin: 0;
-  }
-  
-  @media (max-width: 300px) {
-    .linea-carrito {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .div-img-carrito {
-      img {
-        max-width: 100%;
-        margin-right: 0;
-        margin-bottom: 10px;
-      }
-    }
-  }
-  
+}
 
-#carouselExample {
-    width: 50%;
-    margin: 0 auto; 
-  
-    .carousel-inner {
-      .carousel-item {
-        img {
-          width: 100%; 
-          height: auto;
-        }
-      }
-    }
-  
-    .carousel-control-prev,
-    .carousel-control-next {
-      width: 5%; 
+@include responsive(medium) {
+  .titulo-articulo {
+    font-size: 1.2em;
+  }
+
+  .descripcion-articulo {
+    font-size: 0.9em;
+  }
+}
+
+@include responsive(small) {
+  .linea-carrito {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .div-img-carrito img {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
     }
   }
+}
