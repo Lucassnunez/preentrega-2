@@ -7,7 +7,7 @@ html {
   font-family: $fuente-body;
 
   body {
-    background-color: $color-secundario;
+     background-color: $color-secundario;
     .blanco {
       color: $color-primario;
     }
@@ -230,10 +230,12 @@ html {
   }
 
   h1 {
-    color: $color-primario;
-    @include center-text;
-    padding-top: $padding-top-h1;
-    font-family: $fuenteh-1;
+      background: linear-gradient(rgb(123, 25, 214),rgb(216, 177, 238));
+      -webkit-background-clip: text;
+      color: transparent;  
+      @include center-text;
+      padding-top: $padding-top-h1;
+      
   }
 
   .logo {
