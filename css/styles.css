@@ -146,6 +146,9 @@ html body p, html body li, html body label, html body h2, html body h3 {
 }
 html body p {
   color: white;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 html body li {
   margin-top: 5px;
@@ -188,6 +191,7 @@ html body .local {
   image-rendering: -webkit-optimize-contrast;
   height: 550px;
   width: 100%;
+  margin-top: 15px;
 }
 html h1 {
   background: linear-gradient(rgb(123, 25, 214), rgb(216, 177, 238));
@@ -223,6 +227,7 @@ html .checkout-button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin: 20px
 }
 html .checkout-button:hover {
   background-color: #7900ff;
